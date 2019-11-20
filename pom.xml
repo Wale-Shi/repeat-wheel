@@ -9,7 +9,6 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-
         <module>rw-dependencies</module>
         <module>rw-rpc</module>
     </modules>
@@ -21,8 +20,8 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>rw-dependencies</groupId>
-                <artifactId>top.wale</artifactId>
+                <groupId>top.wale</groupId>
+                <artifactId>rw-dependencies</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>
                 <scope>import</scope>

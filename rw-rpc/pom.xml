@@ -13,7 +13,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>rw-rpc-api</module>
+        <module>rw-rpc-netty</module>
     </modules>
-
-
 </project>
