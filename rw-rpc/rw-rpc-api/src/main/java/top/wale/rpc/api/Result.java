@@ -30,7 +30,7 @@ import java.util.function.BiConsumer;
  * An RPC {@link Result}.  from dubbo
  *
  */
-public interface Result extends CompletionStage<Result>, Future<Result>, Serializable {
+public interface Result extends Serializable {
 
     /**
      * Get invoke result.
@@ -73,26 +73,5 @@ public interface Result extends CompletionStage<Result>, Future<Result>, Seriali
      */
     Object recreate() throws Throwable;
 
-    /**
-     * Returns the specified {@code valueIfAbsent} when not complete, or
-     * returns the result value or throws an exception when complete.
-     *
-     * @see CompletableFuture#getNow(Object)
-     */
-    Result getNow(Result valueIfAbsent);
 
-    /**
-     * Add a callback which can be triggered when the RPC call finishes.
-     * <p>
-     * Just as the method name implies, this method will guarantee the callback being triggered under the same context as when the call was started,
-     * see implementation in {@link Result#whenCompleteWithContext(BiConsumer)}
-     *
-     * @param fn
-     * @return
-     */
-    Result whenCompleteWithContext(BiConsumer<Result, Throwable> fn);
-
-    default CompletableFuture<Result> completionFuture() {
-        return toCompletableFuture();
-    }
 }
