@@ -12,6 +12,7 @@
         <module>rw-dependencies</module>
         <module>rw-rpc</module>
         <module>rw-im</module>
+        <module>rw-common</module>
     </modules>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

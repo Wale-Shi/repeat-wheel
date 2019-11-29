@@ -9,10 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>rw-im</artifactId>
+    <artifactId>rw-common</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>rw-im-server</module>
+        <module>rw-cache</module>
+        <module>rw-base</module>
     </modules>
 
 
